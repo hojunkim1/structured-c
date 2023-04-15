@@ -1,5 +1,8 @@
 # build
 *.out
 
+# IDE
+.vscode
+
 # macOS
 .DS_Store
