@@ -6,7 +6,8 @@ Practice C++ stuff
 
 1. Dtime : namespace
 2. Employee : inheritance
-3. Socket : tcp socket
+3. PFArrayD : inheritance
+4. Socket : tcp socket
 
 ## Index : homework
 
