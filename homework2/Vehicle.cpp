@@ -2,39 +2,27 @@
 
 Vehicle::Vehicle() : manufacturerName(""), numCylinders(0), owner(Person())
 {
+    // 의도적인 공백
 }
 
-Vehicle::Vehicle(string manufacturerName, int numCylinders, const Person &owner)
-    : manufacturerName(manufacturerName), numCylinders(numCylinders), owner(owner)
+Vehicle::Vehicle(string theManufacturerName, int theNumCylinders, const Person &theOwner)
+    : manufacturerName(theManufacturerName), numCylinders(theNumCylinders), owner(theOwner)
 {
+    // 의도적인 공백
 }
 
-Vehicle::Vehicle(const Vehicle &vehicle)
-    : manufacturerName(vehicle.getManufacturerName()),
-      numCylinders(vehicle.getNumCylinders()),
-      owner(vehicle.getOwner())
+Vehicle::Vehicle(const Vehicle &theObject)
+    : manufacturerName(theObject.getManufacturerName()),
+      numCylinders(theObject.getNumCylinders()),
+      owner(theObject.getOwner())
 {
+    // 의도적인 공백
 }
 
-string Vehicle::getManufacturerName() const
+Vehicle &Vehicle::operator=(const Vehicle &rtSide)
 {
-    return this->manufacturerName;
-}
-
-int Vehicle::getNumCylinders() const
-{
-    return this->numCylinders;
-}
-
-Person Vehicle::getOwner() const
-{
-    return this->owner;
-}
-
-Vehicle &Vehicle::operator=(const Vehicle &operand)
-{
-    this->manufacturerName = operand.getManufacturerName();
-    this->numCylinders = operand.getNumCylinders();
-    this->owner = operand.getOwner();
+    manufacturerName = rtSide.getManufacturerName();
+    numCylinders = rtSide.getNumCylinders();
+    owner = rtSide.getOwner();
     return *this;
 }

@@ -9,14 +9,14 @@ class Vehicle
 {
 public:
     Vehicle();
-    Vehicle(string manufacturerName, int numCylinders, const Person &owner);
-    Vehicle(const Vehicle &vehicle);
-    string getManufacturerName() const;
-    int getNumCylinders() const;
-    Person getOwner() const;
-    Vehicle &operator=(const Vehicle &operand);
+    Vehicle(string theManufacturerName, int theNumCylinders, const Person &theOwner);
+    Vehicle(const Vehicle &theObject);
+    string getManufacturerName() const { return manufacturerName; };
+    int getNumCylinders() const { return numCylinders; };
+    Person getOwner() const { return owner; };
+    Vehicle &operator=(const Vehicle &rtSide);
 
-private:
+protected:
     string manufacturerName;
     int numCylinders;
     Person owner;

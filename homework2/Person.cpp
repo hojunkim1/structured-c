@@ -2,24 +2,22 @@
 
 Person::Person() : name("")
 {
+    // 의도적인 공백
 }
 
 Person::Person(string theName) : name(theName)
 {
+    // 의도적인 공백
 }
 
 Person::Person(const Person &theObject) : name(theObject.getName())
 {
-}
-
-string Person::getName() const
-{
-    return this->name;
+    // 의도적인 공백
 }
 
 Person &Person::operator=(const Person &rtSide)
 {
-    this->name = rtSide.getName();
+    name = rtSide.getName();
     return *this;
 }
 

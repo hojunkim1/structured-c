@@ -10,12 +10,12 @@ class Truck : public Vehicle
 {
 public:
     Truck();
-    Truck(string manufacturerName, int numCylinders, const Person &owner,
-          double loadCapacity, int towingCapacity);
-    Truck(const Truck &truck);
-    double getLoadCapacity() const;
-    int getTowingCapacity() const;
-    Truck &operator=(const Truck &operand);
+    Truck(string theManufacturerName, int theNumCylinders, const Person &theOwner,
+          double theLoadCapacity, int theTowingCapacity);
+    Truck(const Truck &theObject);
+    double getLoadCapacity() const { return loadCapacity; };
+    int getTowingCapacity() const { return towingCapacity; };
+    Truck &operator=(const Truck &rtSide);
 
 private:
     double loadCapacity;

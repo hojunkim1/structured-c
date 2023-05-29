@@ -2,34 +2,30 @@
 
 Truck::Truck() : Vehicle(), loadCapacity(0), towingCapacity(0)
 {
+    // 의도적인 공백
 }
 
-Truck::Truck(string manufacturerName, int numCylinders, const Person &owner,
-             double loadCapacity, int towingCapacity)
-    : Vehicle(manufacturerName, numCylinders, owner),
-      loadCapacity(loadCapacity), towingCapacity(towingCapacity)
+Truck::Truck(string theManufacturerName, int theNumCylinders, const Person &theOwner,
+             double theLoadCapacity, int theTowingCapacity)
+    : Vehicle(theManufacturerName, theNumCylinders, theOwner),
+      loadCapacity(theLoadCapacity), towingCapacity(theTowingCapacity)
 {
+    // 의도적인 공백
 }
 
-Truck::Truck(const Truck &truck)
-    : Vehicle(truck.getManufacturerName(), truck.getNumCylinders(), truck.getOwner()),
-      loadCapacity(truck.getLoadCapacity()), towingCapacity(truck.getTowingCapacity())
+Truck::Truck(const Truck &theObject)
+    : Vehicle(theObject.getManufacturerName(), theObject.getNumCylinders(), theObject.getOwner()),
+      loadCapacity(theObject.getLoadCapacity()), towingCapacity(theObject.getTowingCapacity())
 {
+    // 의도적인 공백
 }
 
-double Truck::getLoadCapacity() const
+Truck &Truck::operator=(const Truck &rtSide)
 {
-    return this->loadCapacity;
-}
-
-int Truck::getTowingCapacity() const
-{
-    return this->towingCapacity;
-}
-
-Truck &Truck::operator=(const Truck &operand)
-{
-    this->loadCapacity = operand.getLoadCapacity();
-    this->towingCapacity = operand.getTowingCapacity();
+    manufacturerName = rtSide.getManufacturerName();
+    numCylinders = rtSide.getNumCylinders();
+    owner = rtSide.getOwner();
+    loadCapacity = rtSide.getLoadCapacity();
+    towingCapacity = rtSide.getTowingCapacity();
     return *this;
 }
