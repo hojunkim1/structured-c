@@ -66,6 +66,7 @@ namespace
             exit(1);
         }
     }
+
 } // 명명되지 않은 네임스페이스
 
 namespace DTimeSavitch

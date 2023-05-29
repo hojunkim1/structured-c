@@ -30,6 +30,7 @@ namespace DTimeSavitch
         int hour;
         int minute;
     };
+
 } // namespace DTimeSavitch
 
 #endif // DTIME_H
