@@ -1,7 +1,10 @@
 #ifndef TRUCK_H
 #define TRUCK_H
 
+#include <string>
+#include "Person.h"
 #include "Vehicle.h"
+using std::string;
 
 class Truck : public Vehicle
 {

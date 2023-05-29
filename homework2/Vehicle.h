@@ -1,7 +1,9 @@
 #ifndef VEHICLE_H
 #define VEHICLE_H
 
+#include <string>
 #include "Person.h"
+using std::string;
 
 class Vehicle
 {
