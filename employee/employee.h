@@ -17,7 +17,7 @@ namespace SavitchEmployees
         void setName(const string &newName);
         void setSsn(const string &newSsn);
         void setNetPay(double newNetPay);
-        void printCheck() const;
+        virtual void printCheck() const = 0;
 
     private:
         string name;
