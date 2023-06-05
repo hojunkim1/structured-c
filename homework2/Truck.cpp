@@ -14,18 +14,18 @@ Truck::Truck(string theManufacturerName, int theNumCylinders, const Person &theO
 }
 
 Truck::Truck(const Truck &theObject)
-    : Vehicle(theObject.getManufacturerName(), theObject.getNumCylinders(), theObject.getOwner()),
-      loadCapacity(theObject.getLoadCapacity()), towingCapacity(theObject.getTowingCapacity())
+    : Vehicle(theObject.manufacturerName, theObject.numCylinders, theObject.owner),
+      loadCapacity(theObject.loadCapacity), towingCapacity(theObject.towingCapacity)
 {
     // 의도적인 공백
 }
 
 Truck &Truck::operator=(const Truck &rtSide)
 {
-    manufacturerName = rtSide.getManufacturerName();
-    numCylinders = rtSide.getNumCylinders();
-    owner = rtSide.getOwner();
-    loadCapacity = rtSide.getLoadCapacity();
-    towingCapacity = rtSide.getTowingCapacity();
+    manufacturerName = rtSide.manufacturerName;
+    numCylinders = rtSide.numCylinders;
+    owner = rtSide.owner;
+    loadCapacity = rtSide.loadCapacity;
+    towingCapacity = rtSide.towingCapacity;
     return *this;
 }

@@ -12,17 +12,17 @@ Vehicle::Vehicle(string theManufacturerName, int theNumCylinders, const Person &
 }
 
 Vehicle::Vehicle(const Vehicle &theObject)
-    : manufacturerName(theObject.getManufacturerName()),
-      numCylinders(theObject.getNumCylinders()),
-      owner(theObject.getOwner())
+    : manufacturerName(theObject.manufacturerName),
+      numCylinders(theObject.numCylinders),
+      owner(theObject.owner)
 {
     // 의도적인 공백
 }
 
 Vehicle &Vehicle::operator=(const Vehicle &rtSide)
 {
-    manufacturerName = rtSide.getManufacturerName();
-    numCylinders = rtSide.getNumCylinders();
-    owner = rtSide.getOwner();
+    manufacturerName = rtSide.manufacturerName;
+    numCylinders = rtSide.numCylinders;
+    owner = rtSide.owner;
     return *this;
 }

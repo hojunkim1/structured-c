@@ -4,7 +4,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-void printTruckInfo(Truck truck);
+void printTruckInfo(Truck &truck);
 
 int main()
 {
@@ -31,7 +31,7 @@ int main()
     return 0;
 }
 
-void printTruckInfo(Truck truck)
+void printTruckInfo(Truck &truck)
 {
     cout << "Manufacture name: " << truck.getManufacturerName() << endl
          << "Cylinders number: " << truck.getNumCylinders() << endl
